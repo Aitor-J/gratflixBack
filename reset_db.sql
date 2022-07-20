@@ -187,6 +187,122 @@ VALUES
  ( ('TOY STORY'),
  ('https://moviecovers.com/DATA/zipcache/TOY%20STORY.jpg'),
  ('https://www.youtube.com/watch?v=YzuUSdxoGUU'),
+ ('1995'), ('John LASSETER'), ('1H21'), (5)),
+
+ ( ('THE CONJURING'),
+ ('https://moviecovers.com/DATA/zipcache/CONJURING%20%20LES%20DOSSIERS%20WARREN%20(2013).jpg'),('https://www.youtube.com/watch?v=McOmzgX09wo'),
+ ('2013'), ('James WAN'), ('1H52'), (4)),
+
+ ( ('ALIEN'),
+ ('https://moviecovers.com/DATA/zipcache/ALIEN.jpg'),
+ ('https://www.youtube.com/watch?v=o_rfh8wBnGE'),
+ ('1979'), ('Ridley SCOTT'), ('1H57'), (4)),
+
+ ( ('INTERSTELLAR'),
+ ('https://moviecovers.com/DATA/zipcache/INTERSTELLAR%20(2014).jpg'),
+ ('https://www.youtube.com/watch?v=VaOijhK3CRU'),
+ ('2014'), ('Christopher NOLAN'), ('2H49'), (2)),
+
+ ( ('BACK TO THE FUTURE PART III'),
+ ('https://moviecovers.com/DATA/zipcache/RETOUR%20VERS%20LE%20FUTUR%203.jpg'),
+ ('https://www.youtube.com/watch?v=GZlnASpsHHk'),
+ ('1990'), ('Robert ZEMECKIS'), ('1H58'), (2)),
+
+ ( ('THE TRANSPORTER'),
+ ('https://moviecovers.com/DATA/zipcache/LE%20TRANSPORTEUR.jpg'),
+ ('https://www.youtube.com/watch?v=CxMDrew0INA'),
+ ('2002'), ('Louis LETERRIER'), ('1H32'), (1)),
+
+ ( ("OSS 117 : LE CAIE NID D'ESPIONS"),
+ ('https://moviecovers.com/DATA/zipcache/OSS%20117%20LE%20CAIRE%20NID%20D%27%20ESPIONS.jpg'),
+ ('https://www.youtube.com/watch?v=I0aviu-FqNo'),
+ ('2006'), ('Michel HAZANAVICIUS'), ('1H39'), (6)),
+
+ ( ('MEMENTO'),
+ ('https://moviecovers.com/DATA/zipcache/MEMENTO.jpg'),
+ ('https://www.youtube.com/watch?v=rX7nZxY8OFk'),
+ ('2000'), ('Christopher NOLAN'), ('1H53'), (3)),
+ 
+ ( ('TOY STORY'),
+ ('https://moviecovers.com/DATA/zipcache/TOY%20STORY.jpg'),
+ ('https://www.youtube.com/watch?v=YzuUSdxoGUU'),
+ ('1995'), ('John LASSETER'), ('1H21'), (5)),
+( ('THE CONJURING'),
+ ('https://moviecovers.com/DATA/zipcache/CONJURING%20%20LES%20DOSSIERS%20WARREN%20(2013).jpg'),('https://www.youtube.com/watch?v=McOmzgX09wo'),
+ ('2013'), ('James WAN'), ('1H52'), (4)),
+
+ ( ('ALIEN'),
+ ('https://moviecovers.com/DATA/zipcache/ALIEN.jpg'),
+ ('https://www.youtube.com/watch?v=o_rfh8wBnGE'),
+ ('1979'), ('Ridley SCOTT'), ('1H57'), (4)),
+
+ ( ('INTERSTELLAR'),
+ ('https://moviecovers.com/DATA/zipcache/INTERSTELLAR%20(2014).jpg'),
+ ('https://www.youtube.com/watch?v=VaOijhK3CRU'),
+ ('2014'), ('Christopher NOLAN'), ('2H49'), (2)),
+
+ ( ('BACK TO THE FUTURE PART III'),
+ ('https://moviecovers.com/DATA/zipcache/RETOUR%20VERS%20LE%20FUTUR%203.jpg'),
+ ('https://www.youtube.com/watch?v=GZlnASpsHHk'),
+ ('1990'), ('Robert ZEMECKIS'), ('1H58'), (2)),
+
+ ( ('THE TRANSPORTER'),
+ ('https://moviecovers.com/DATA/zipcache/LE%20TRANSPORTEUR.jpg'),
+ ('https://www.youtube.com/watch?v=CxMDrew0INA'),
+ ('2002'), ('Louis LETERRIER'), ('1H32'), (1)),
+
+ ( ("OSS 117 : LE CAIE NID D'ESPIONS"),
+ ('https://moviecovers.com/DATA/zipcache/OSS%20117%20LE%20CAIRE%20NID%20D%27%20ESPIONS.jpg'),
+ ('https://www.youtube.com/watch?v=I0aviu-FqNo'),
+ ('2006'), ('Michel HAZANAVICIUS'), ('1H39'), (6)),
+
+ ( ('MEMENTO'),
+ ('https://moviecovers.com/DATA/zipcache/MEMENTO.jpg'),
+ ('https://www.youtube.com/watch?v=rX7nZxY8OFk'),
+ ('2000'), ('Christopher NOLAN'), ('1H53'), (3)),
+ 
+ ( ('TOY STORY'),
+ ('https://moviecovers.com/DATA/zipcache/TOY%20STORY.jpg'),
+ ('https://www.youtube.com/watch?v=YzuUSdxoGUU'),
+ ('1995'), ('John LASSETER'), ('1H21'), (5)),
+
+ ( ('THE CONJURING'),
+ ('https://moviecovers.com/DATA/zipcache/CONJURING%20%20LES%20DOSSIERS%20WARREN%20(2013).jpg'),('https://www.youtube.com/watch?v=McOmzgX09wo'),
+ ('2013'), ('James WAN'), ('1H52'), (4)),
+
+ ( ('ALIEN'),
+ ('https://moviecovers.com/DATA/zipcache/ALIEN.jpg'),
+ ('https://www.youtube.com/watch?v=o_rfh8wBnGE'),
+ ('1979'), ('Ridley SCOTT'), ('1H57'), (4)),
+
+ ( ('INTERSTELLAR'),
+ ('https://moviecovers.com/DATA/zipcache/INTERSTELLAR%20(2014).jpg'),
+ ('https://www.youtube.com/watch?v=VaOijhK3CRU'),
+ ('2014'), ('Christopher NOLAN'), ('2H49'), (2)),
+
+ ( ('BACK TO THE FUTURE PART III'),
+ ('https://moviecovers.com/DATA/zipcache/RETOUR%20VERS%20LE%20FUTUR%203.jpg'),
+ ('https://www.youtube.com/watch?v=GZlnASpsHHk'),
+ ('1990'), ('Robert ZEMECKIS'), ('1H58'), (2)),
+
+ ( ('THE TRANSPORTER'),
+ ('https://moviecovers.com/DATA/zipcache/LE%20TRANSPORTEUR.jpg'),
+ ('https://www.youtube.com/watch?v=CxMDrew0INA'),
+ ('2002'), ('Louis LETERRIER'), ('1H32'), (1)),
+
+ ( ("OSS 117 : LE CAIE NID D'ESPIONS"),
+ ('https://moviecovers.com/DATA/zipcache/OSS%20117%20LE%20CAIRE%20NID%20D%27%20ESPIONS.jpg'),
+ ('https://www.youtube.com/watch?v=I0aviu-FqNo'),
+ ('2006'), ('Michel HAZANAVICIUS'), ('1H39'), (6)),
+
+ ( ('MEMENTO'),
+ ('https://moviecovers.com/DATA/zipcache/MEMENTO.jpg'),
+ ('https://www.youtube.com/watch?v=rX7nZxY8OFk'),
+ ('2000'), ('Christopher NOLAN'), ('1H53'), (3)),
+ 
+ ( ('TOY STORY'),
+ ('https://moviecovers.com/DATA/zipcache/TOY%20STORY.jpg'),
+ ('https://www.youtube.com/watch?v=YzuUSdxoGUU'),
  ('1995'), ('John LASSETER'), ('1H21'), (5));
  
  
