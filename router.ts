@@ -1,5 +1,6 @@
 import usersController from './controllers/users';
 import moviesController from './controllers/movies';
+import typesController from './controllers/types'
 import authController from './controllers/auth';
 import { Express } from 'express';
 
@@ -39,6 +40,20 @@ const setupRoutes = (server: Express) => {
   // LOGIN
   server.post('/api/login', authController.validateLogin, authController.login);
 
+
+  // TYPES
+  // get types
+  server.get('/api/types', typesController.getAllTypes);
+  // get movie by id
+  server.get('/api/types/:idType', typesController.getTypeById);
+
+  //--IDPAGETYPE--
+  server.get(
+    '/api/types/:idType/movies',
+    moviesController.getMoviesByIdType
+  );
+
+
   // MOVIES
   // get movies
   server.get('/api/movies', moviesController.getAllMovies);
@@ -67,5 +82,6 @@ const setupRoutes = (server: Express) => {
     moviesController.updateMovie
   );
 };
+
 
 export default setupRoutes;
