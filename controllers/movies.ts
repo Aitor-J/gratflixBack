@@ -2,62 +2,6 @@ import { Request, Response, NextFunction, RequestHandler } from 'express';
 import Movie from '../models/movie';
 import { ErrorHandler } from '../helpers/errors';
 import IMovie from '../interfaces/IMovie';
-// import Joi from 'joi';
-
-// VALIDATE INPUT FOR POST AND PUT
-// const validatePage = (req: Request, res: Response, next: NextFunction) => {
-//   console.log('validate')
-//   let required: Joi.PresenceMode = 'optional';
-//   if ((req.method === 'POST', 'PUT')) {
-//     required = 'required';
-//   }
-
-//   const errors = Joi.object({
-//     id: Joi.number().optional(),
-//     idPageType: Joi.number().required().valid(1, 2, 3, 4, 5, 6, 7, 8),
-//     title: [Joi.string().max(150).optional(), Joi.allow(null)],
-//     subTitle: [Joi.string().max(150).optional(), Joi.allow(null)],
-
-//     author: Joi.any().when('idPageType', {
-//       is: 5,
-//       then: [Joi.string().max(250).optional(), Joi.allow(null)],
-//       otherwise: [Joi.string().max(250).optional(), Joi.allow(null)],
-//     }),
-//     mobileTitle: [Joi.string().max(150).optional(), Joi.allow(null)],
-//     mobileSubtitle: [Joi.string().max(150).optional(), Joi.allow(null)],
-//     recipeTitle: Joi.any().when('idPageType', {
-//       is: 5,
-//       then: [Joi.string().max(250).optional(), Joi.allow(null)],
-//       otherwise: [Joi.string().max(250).optional(), Joi.allow(null)],
-//     }),
-//     description: [Joi.string().max(250).optional(), Joi.allow(null)],
-//     image1: Joi.any().when('idPageType', {
-//       is: 5,
-//       then: [Joi.string().max(250).optional(), Joi.allow(null)],
-//       otherwise: [Joi.string().max(250).optional(), Joi.allow(null)],
-//     }),
-//     image2: [Joi.string().max(250).optional(), Joi.allow(null)],
-//     image3: [Joi.string().max(250).optional(), Joi.allow(null)],
-//     backgroundImg: [Joi.string(), Joi.allow(null)],
-//     createdDate: [Joi.date(), Joi.allow(null)],
-//     website: [Joi.string().max(250).optional(), Joi.allow(null)],
-//     idUser: Joi.number(),
-//     idSupplier: Joi.any().when('idPageType', {
-//       is: 4,
-//       then: Joi.number().max(250).required(),
-//       otherwise: Joi.number().max(250).optional(),
-//     }),
-//     idAddress: [Joi.number().optional(), Joi.allow(null)],
-//     idNewsletterSubscriber: [Joi.number().optional(), Joi.allow(null)],
-//   }).validate(req.body, { abortEarly: false }).error;
-
-//   if (errors) {
-//     next(new ErrorHandler(422, errors.message));
-//   } else {
-//     console.log('validate')
-//     next();
-//   }
-// };
 
 //GET ALL MOVIES
 const getAllMovies = (async (
@@ -127,7 +71,6 @@ const getMovieType = async (req: Request, res: Response, next: NextFunction) => 
 // ADD MOVIE
 const addMovie = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        console.log('hello')
         const idMovie = await Movie.addMovie(req.body as IMovie);
         if (idMovie) {
             res.status(201).json({ id: idMovie, ...req.body });
