@@ -170,25 +170,6 @@ const getAddressesByUser = async (
   }
 };
 
-const deleteAddressesByUser = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
-  try {
-    const { idUser } = req.params;
-
-    const addressesDeleted = await Address.deleteAddressByUser(Number(idUser));
-    if (addressesDeleted) {
-      res.status(200).send('Addresses deleted');
-    } else {
-      throw new ErrorHandler(500, `Addresses cannot be deleted`);
-    }
-  } catch (err) {
-    next(err);
-  }
-};
-
 export default {
   getAllUsers,
   getOneUser,
@@ -198,6 +179,5 @@ export default {
   validateUser,
   addUser,
   updateUser,
-  getAddressesByUser,
-  deleteAddressesByUser,
+  getAddressesByUser
 };

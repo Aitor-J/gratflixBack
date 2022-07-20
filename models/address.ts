@@ -90,19 +90,11 @@ const deleteAddress = async (idAddress: number): Promise<boolean> => {
   return results[0].affectedRows === 1;
 };
 
-const deleteAddressByUser = async (idUser: string): Promise<boolean> => {
-  const results = await connection
-    .promise()
-    .query<ResultSetHeader>('DELETE FROM addresses WHERE idUser = ?', [idUser]);
-  return results[0].affectedRows > 1;
-};
-
 export {
   getAllAddresses,
   addAddress,
   updateAddress,
   deleteAddress,
   getAddressById,
-  getAddressByUser,
-  deleteAddressByUser,
+  getAddressByUser
 };
