@@ -43,7 +43,13 @@ const setupRoutes = (server: Express) => {
   // get movies
   server.get('/api/movies', moviesController.getAllMovies);
   // get movie by id
-  server.get('/api/addresses/:idAddress', moviesController.getMovieById);
+  server.get('/api/movies/:idMovie', moviesController.getMovieById);
+
+  //--IDPAGETYPE--
+  server.get(
+    '/api/types/:idType/movies',
+    moviesController.getMoviesByIdType
+  );
 
   // delete movie by id
   server.delete(
