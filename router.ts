@@ -1,5 +1,5 @@
 import usersController from './controllers/users';
-import addressesController from './controllers/addresses';
+import moviesController from './controllers/movies';
 import authController from './controllers/auth';
 import { Express } from 'express';
 
@@ -39,51 +39,26 @@ const setupRoutes = (server: Express) => {
   // LOGIN
   server.post('/api/login', authController.validateLogin, authController.login);
 
-  // ADDRESSES
-  // get addresses
-  server.get('/api/addresses', addressesController.getAllAddresses);
-  // get address by id
-  server.get('/api/addresses/:idAddress', addressesController.getAddressById);
+  // MOVIES
+  // get movies
+  server.get('/api/movies', moviesController.getAllMovies);
+  // get movie by id
+  server.get('/api/addresses/:idAddress', moviesController.getMovieById);
 
-  // get addresses by user
-  server.get(
-    '/api/users/:idUser/addresses',
-    usersController.userExists,
-    authController.getCurrentSession,
-    usersController.getAddressesByUser
-  );
-  // delete addresses by user
+  // delete movie by id
   server.delete(
-    '/api/users/:idUser/addresses',
-    authController.getCurrentSession,
-    authController.checkSessionPrivileges,
-    usersController.userExists,
-    usersController.deleteAddressesByUser
-  );
-  // delete address by id
-  server.delete(
-    '/api/addresses/:idAddress',
-    authController.getCurrentSession,
-    authController.checkSessionPrivileges,
-    addressesController.addressExists,
-    addressesController.deleteAddress
+    '/api/movies/:idMovie',
+    moviesController.deleteMovie
   );
   // add an address
   server.post(
-    '/api/addresses/',
-    authController.getCurrentSession,
-    authController.checkSessionPrivileges,
-    addressesController.validateAddress,
-    addressesController.addAddress
+    '/api/movies/',
+    moviesController.addMovie
   );
   // put address, checks if an address exists and updates it
   server.put(
-    '/api/addresses/:idAddress',
-    authController.getCurrentSession,
-    authController.checkSessionPrivileges,
-    addressesController.addressExists,
-    addressesController.validateAddress,
-    addressesController.updateAddress
+    '/api/movies/:idMovie',
+    moviesController.updateMovie
   );
 };
 
