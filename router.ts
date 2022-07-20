@@ -1,5 +1,6 @@
 import usersController from './controllers/users';
-import addressesController from './controllers/addresses';
+import moviesController from './controllers/movies';
+import typesController from './controllers/types'
 import authController from './controllers/auth';
 import { Express } from 'express';
 
@@ -39,52 +40,48 @@ const setupRoutes = (server: Express) => {
   // LOGIN
   server.post('/api/login', authController.validateLogin, authController.login);
 
-  // ADDRESSES
-  // get addresses
-  server.get('/api/addresses', addressesController.getAllAddresses);
-  // get address by id
-  server.get('/api/addresses/:idAddress', addressesController.getAddressById);
 
-  // get addresses by user
+  // TYPES
+  // get types
+  server.get('/api/types', typesController.getAllTypes);
+  // get movie by id
+  server.get('/api/types/:idType', typesController.getTypeById);
+
+  //--IDPAGETYPE--
   server.get(
-    '/api/users/:idUser/addresses',
-    usersController.userExists,
-    authController.getCurrentSession,
-    usersController.getAddressesByUser
+    '/api/types/:idType/movies',
+    moviesController.getMoviesByIdType
   );
-  // delete addresses by user
-  server.delete(
-    '/api/users/:idUser/addresses',
-    authController.getCurrentSession,
-    authController.checkSessionPrivileges,
-    usersController.userExists,
-    usersController.deleteAddressesByUser
+
+
+  // MOVIES
+  // get movies
+  server.get('/api/movies', moviesController.getAllMovies);
+  // get movie by id
+  server.get('/api/movies/:idMovie', moviesController.getMovieById);
+
+  //--IDPAGETYPE--
+  server.get(
+    '/api/types/:idType/movies',
+    moviesController.getMoviesByIdType
   );
-  // delete address by id
+
+  // delete movie by id
   server.delete(
-    '/api/addresses/:idAddress',
-    authController.getCurrentSession,
-    authController.checkSessionPrivileges,
-    addressesController.addressExists,
-    addressesController.deleteAddress
+    '/api/movies/:idMovie',
+    moviesController.deleteMovie
   );
   // add an address
   server.post(
-    '/api/addresses/',
-    authController.getCurrentSession,
-    authController.checkSessionPrivileges,
-    addressesController.validateAddress,
-    addressesController.addAddress
+    '/api/movies/',
+    moviesController.addMovie
   );
   // put address, checks if an address exists and updates it
   server.put(
-    '/api/addresses/:idAddress',
-    authController.getCurrentSession,
-    authController.checkSessionPrivileges,
-    addressesController.addressExists,
-    addressesController.validateAddress,
-    addressesController.updateAddress
+    '/api/movies/:idMovie',
+    moviesController.updateMovie
   );
 };
+
 
 export default setupRoutes;

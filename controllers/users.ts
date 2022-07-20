@@ -1,8 +1,6 @@
 import { NextFunction, Request, RequestHandler, Response } from 'express';
 import * as User from '../models/user';
-import * as Address from '../models/address';
 import IUser from '../interfaces/IUser';
-import IAddress from '../interfaces/IAddress';
 import { ErrorHandler } from '../helpers/errors';
 import { formatSortString } from '../helpers/functions';
 import Joi from 'joi';
@@ -152,43 +150,6 @@ const deleteUser = async (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
-////////// ADDRESSES BY USER
-const getAddressesByUser = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
-  try {
-    const { idUser } = req.params;
-
-    const addresses: IAddress[] = await Address.getAddressByUser(
-      Number(idUser)
-    );
-    res.status(200).json(addresses);
-  } catch (err) {
-    next(err);
-  }
-};
-
-const deleteAddressesByUser = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
-  try {
-    const { idUser } = req.params;
-
-    const addressesDeleted = await Address.deleteAddressByUser(Number(idUser));
-    if (addressesDeleted) {
-      res.status(200).send('Addresses deleted');
-    } else {
-      throw new ErrorHandler(500, `Addresses cannot be deleted`);
-    }
-  } catch (err) {
-    next(err);
-  }
-};
-
 export default {
   getAllUsers,
   getOneUser,
@@ -197,7 +158,5 @@ export default {
   deleteUser,
   validateUser,
   addUser,
-  updateUser,
-  getAddressesByUser,
-  deleteAddressesByUser,
+  updateUser
 };
