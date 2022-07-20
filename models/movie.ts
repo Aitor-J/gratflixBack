@@ -30,10 +30,11 @@ const addMovie = async (movie: IMovie): Promise<number> => {
     const results = await connection
         .promise()
         .query<ResultSetHeader>(
-            'INSERT INTO movies (name, cover, year, director, length, idType) VALUES (?, ?, ?, ?, ?, ?)',
+            'INSERT INTO movies (name, cover, trailer, year, director, length, idType) VALUES (?, ?, ?, ?, ?, ?, ?)',
             [
                 movie.name,
                 movie.cover,
+                movie.trailer,
                 movie.year,
                 movie.director,
                 movie.length,
@@ -58,6 +59,11 @@ const updateMovie = async (idMovie: number, movie: IMovie): Promise<boolean> => 
     if (movie.cover) {
         sql += oneValue ? ', cover = ? ' : ' cover = ? ';
         sqlValues.push(movie.cover);
+        oneValue = true;
+    }
+    if (movie.trailer) {
+        sql += oneValue ? ', trailer = ? ' : ' trailer = ? ';
+        sqlValues.push(movie.trailer);
         oneValue = true;
     }
     if (movie.year) {
