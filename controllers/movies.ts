@@ -101,8 +101,12 @@ const updateMovie = async (req: Request, res: Response, next: NextFunction) => {
     }
 };
 
+interface RequestWithRecord extends Request {
+    record?: any;
+}
+
 //DELETE MOVIE
-const deleteMovie = async (req: Request, res: Response, next: NextFunction) => {
+const deleteMovie = async (req: RequestWithRecord, res: Response, next: NextFunction) => {
     try {
         const { idMovie } = req.params;
         const movieDeleted = await Movie.deleteMovie(Number(idMovie));
