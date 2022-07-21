@@ -9,8 +9,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const corsOptions: cors.CorsOptions = {
-  origin: ['http://localhost:3001', 'http://localhost:3000'],
-  credentials: true,
+  origin: '*'
 };
 
 // middleware cors
