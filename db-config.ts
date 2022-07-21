@@ -7,6 +7,8 @@ const connection: Connection = mysql.createConnection({
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
+  debug: true,
+  connectTimeout: 999999,
 });
 
 export default connection;
