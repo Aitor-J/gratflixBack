@@ -6,13 +6,13 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dev": "nodemon index.js",
-    "ts": "tsc -w",
+    "dev": "ts-node-dev index.ts",
+    "ts": "tsc",
     "fix": "eslint \"./**/*.ts\" --fix",
     "prettify": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
-    "start": "node index.js",
+    "start": "node ./dist/index.js",
     "postinstall": "tsc"
   },
   "eslintConfig": {
